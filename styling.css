@@ -9,7 +9,7 @@ div.bordered {
   width: 95%;
   padding: 0.5vw;
   border-style: solid;
-  border-radius: 0.1vw;
+  border-radius: 0.5vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
   display: grid;
   grid-template-columns: 20% 80%;
@@ -17,6 +17,7 @@ div.bordered {
 
 div.inline {
   padding: 0.2vw;
+  margin: 0.2vw;
 }
 
 img.styled {
@@ -34,6 +35,11 @@ td.content {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
   }
   div.bordered {
-    grid-template-columns: auto;
+    display: block;
+    padding: 2vw;
+    border-radius: 2vw;
+  }
+  div.inline {
+    width: 100%;
   }
 }
