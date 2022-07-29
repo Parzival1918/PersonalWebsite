@@ -11,6 +11,12 @@ div.bordered {
   border-style: solid;
   border-radius: 0.1vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+div.inline {
+  padding: 0.2vw;
 }
 
 img.styled {
@@ -21,4 +27,13 @@ td.content {
   padding: 0.5vw;
   text-align: justify;
   vertical-align: top;
+}
+
+@media screen and (max-width: 800px) {
+  div.center {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  div.bordered {
+    grid-template-columns: auto;
+  }
 }
