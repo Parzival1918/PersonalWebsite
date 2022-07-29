@@ -10,8 +10,15 @@ div.bordered {
   padding: 0.5vw;
   border-style: solid;
   border-radius: 0.1vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 img.styled {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+td.content {
+  padding: 0.5vw;
+  text-align: justify;
+  vertical-align: top;
 }
