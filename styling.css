@@ -1,3 +1,16 @@
+:root {
+  --selected: rgba(0, 0, 0, 0.05);
+  --unselected: rgba(0, 0, 0, 0);
+  --textcolor: rgba(0, 0, 0, 1);
+  --backgroundcolor: rgba(0, 0, 0, 0);
+  --shadowboxes: rgba(0, 0, 0, 0.2);
+}
+
+body.bodystyling {
+  color: var(--textcolor);
+  background-color: var(--backgroundcolor);
+}
+
 div.center {
   margin: auto;
   width: 60%;
@@ -10,7 +23,7 @@ div.bordered {
   padding: 0.5vw;
   border-style: solid;
   border-radius: 0.5vw;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 var(--shadowboxes), 0 6px 20px 0 var(--shadowboxes);
   display: grid;
   grid-template-columns: 20% 80%;
   animation-name: colorfadeout;
@@ -25,13 +38,13 @@ div.bordered:hover {
 }
 
 @keyframes colorfadein {
-  from {background-color: rgba(0, 0, 0, 0);}
-  to {background-color: rgba(0, 0, 0, 0.05);}
+  from {background-color: var(--unselected);}
+  to {background-color: var(--selected);}
 }
 
 @keyframes colorfadeout {
-  from {background-color: rgba(0, 0, 0, 0.05);}
-  to {background-color: rgba(0, 0, 0, 0);}
+  from {background-color:  var(--selected);}
+  to {background-color:  var(--unselected);}
 }
 
 div.inline {
@@ -47,7 +60,7 @@ div.menustyle {
 }
 
 img.styled {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 var(--shadowboxes), 0 6px 20px 0 var(--shadowboxes);
 }
 
 td.content {
@@ -58,8 +71,8 @@ td.content {
 
 button.menu {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(0, 0, 0, 0);
+  background-color: var(--backgroundcolor);
+  border-width: 0px;
   border-radius: 0.5vw;
   padding: 0.8vw;
   font-size: 20px;
