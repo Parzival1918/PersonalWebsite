@@ -13,11 +13,37 @@ div.bordered {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
   display: grid;
   grid-template-columns: 20% 80%;
+  animation-name: colorfadeout;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+div.bordered:hover {
+  animation-name: colorfadein;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes colorfadein {
+  from {background-color: rgba(0, 0, 0, 0);}
+  to {background-color: rgba(0, 0, 0, 0.05);}
+}
+
+@keyframes colorfadeout {
+  from {background-color: rgba(0, 0, 0, 0.05);}
+  to {background-color: rgba(0, 0, 0, 0);}
 }
 
 div.inline {
   padding: 0.2vw;
   margin: 0.2vw;
+}
+
+div.menustyle {
+  margin: auto;
+  padding: 0.5vw;
+  border-style: solid;
+  border-radius: 0.5vw;
 }
 
 img.styled {
@@ -30,6 +56,26 @@ td.content {
   vertical-align: top;
 }
 
+button.menu {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  border-radius: 0.5vw;
+  padding: 0.8vw;
+  font-size: 20px;
+  font-weight: bolder;
+
+  animation-name: colorfadeout;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+button.menu:hover {
+  animation-name: colorfadein;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
 @media screen and (max-width: 800px) {
   div.center {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
@@ -39,7 +85,15 @@ td.content {
     padding: 2vw;
     border-radius: 2vw;
   }
+  div.menustyle {
+    border-radius: 2vw;
+  }
   div.inline {
     width: 100%;
+    margin: 0vw;
+  }
+  button.menu {
+    width: 100%;
+    border-radius: 2vw;
   }
 }
