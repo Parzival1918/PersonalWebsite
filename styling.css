@@ -10,7 +10,8 @@ body.bodystyling {
   color: var(--textcolor);
   background-color: var(--backgroundcolor);
   font-family: Arial;
-
+  margin: auto;
+  
   animation-name: fadein;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -23,7 +24,7 @@ body.bodystyling {
   }
   to {
     opacity: 1;
-    width: 100%;
+    width: 95%;
   }
 }
 
