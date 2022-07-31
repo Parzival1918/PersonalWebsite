@@ -125,4 +125,12 @@ button.menu:hover {
     width: 100%;
     border-radius: 2vw;
   }
+  button.menuselected {
+    width: 100%;
+    border-radius: 2vw;
+  }
+  div.menustyle {
+    width: 80%;
+    margin: auto;
+  }
 }
