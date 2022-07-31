@@ -130,6 +130,21 @@ button.menu:hover {
   animation-fill-mode: forwards;
 }
 
+td {
+  padding-right: 2vw;
+  margin-right: 1vw;
+}
+
+th {
+  text-align: left;
+  vertical-align: top;
+  font-weight: normal;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 800px) {
   div.center {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
