@@ -44,6 +44,7 @@ h1 {
 
 h2 {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 div.center {
@@ -138,8 +139,11 @@ button.menu:hover {
   animation-fill-mode: forwards;
 }
 
+table {
+    width: 100%;
+}
+
 td {
-  padding-right: 2vw;
   padding-bottom: 5px;
   padding-top: 5px;
   vertical-align: top;
@@ -153,12 +157,9 @@ th {
   padding-right: 4vw;
 }
 
-th:out-of-range {
-  display: block;
-}
-
 td:first-child {
   font-weight: bold;
+  width: 30%;
 }
 
 @media screen and (max-width: 800px) {
