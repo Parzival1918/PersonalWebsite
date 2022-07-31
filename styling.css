@@ -9,6 +9,12 @@
 body.bodystyling {
   color: var(--textcolor);
   background-color: var(--backgroundcolor);
+  font-family: Arial;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: bolder;
 }
 
 div.center {
