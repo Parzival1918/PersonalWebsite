@@ -89,6 +89,16 @@ button.menu {
   animation-fill-mode: forwards;
 }
 
+button.menuselected {
+  text-align: center;
+  background-color: var(--selected);
+  border-width: 0px;
+  border-radius: 0.5vw;
+  padding: 0.8vw;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
 button.menu:hover {
   animation-name: colorfadein;
   animation-duration: 0.2s;
