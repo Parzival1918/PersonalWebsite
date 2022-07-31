@@ -1,5 +1,6 @@
-const {readFileSync, promises: fsPromises} = require('fs');
-
-const contents = await fsPromises.readFile('projectText.txt', 'utf-8');
-
-document.getElementById("fill").innerHTML = contents;
+fetch('projectText.txt')
+  .then(response => response.text())
+  .then(data => {
+  	// Do something with your data
+  	document.getElementById("fill").innerHTML = response;
+  });

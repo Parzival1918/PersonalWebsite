@@ -5,6 +5,7 @@
   --backgroundcolor: rgba(0, 0, 0, 0);
   --shadowboxes: rgba(0, 0, 0, 0.2);
   --centeringpercent: 60%;
+  --borderrad: 1vw;
 }
 
 body.bodystyling {
@@ -27,11 +28,9 @@ header {
 @keyframes fadein {
   from {
     opacity: 0;
-    width: 80%;
   }
   to {
     opacity: 1;
-    width: 95%;
   }
 }
 
@@ -58,7 +57,7 @@ div.bordered {
   width: 95%;
   padding: 0.5vw;
   border-style: solid;
-  border-radius: 0.5vw;
+  border-radius: var(--borderrad);
   box-shadow: 0 4px 8px 0 var(--shadowboxes), 0 6px 20px 0 var(--shadowboxes);
   /*
   display: grid;
@@ -91,7 +90,7 @@ div.bordered:not(:nth-of-type(1)) {
 
 div.inline {
   padding: 1vw;
-  margin: 0.2vw;
+  margin: auto;
   border-bottom-style: solid;
   text-align: center;
 }
@@ -100,18 +99,12 @@ div.menustyle {
   margin: auto;
   padding: 0.5vw;
   border-style: solid;
-  border-radius: 0.5vw;
+  border-radius: var(--borderrad);
 }
 
 img.styled {
   box-shadow: 0 4px 8px 0 var(--shadowboxes), 0 6px 20px 0 var(--shadowboxes);
-  margin-right: 1vw;
-  vertical-align: top;
-}
-
-td.content {
-  padding: 0.5vw;
-  text-align: justify;
+  margin: 1vw;
   vertical-align: top;
 }
 
@@ -119,7 +112,7 @@ button.menu {
   text-align: center;
   background-color: var(--backgroundcolor);
   border-width: 0px;
-  border-radius: 0.5vw;
+  border-radius: var(--borderrad);
   padding: 0.8vw;
   font-size: 20px;
   font-weight: bolder;
@@ -133,7 +126,7 @@ button.menuselected {
   text-align: center;
   background-color: var(--selected);
   border-width: 0px;
-  border-radius: 0.5vw;
+  border-radius: var(--borderrad);
   padding: 0.8vw;
   font-size: 20px;
   font-weight: bolder;
@@ -147,7 +140,8 @@ button.menu:hover {
 
 td {
   padding-right: 2vw;
-  margin-right: 1vw;
+  padding-bottom: 5px;
+  padding-top: 5px;
   vertical-align: top;
   text-align: left;
 }
@@ -159,39 +153,35 @@ th {
   padding-right: 4vw;
 }
 
+th:out-of-range {
+  display: block;
+}
+
 td:first-child {
   font-weight: bold;
 }
 
 @media screen and (max-width: 800px) {
-  div.center {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  :root {
+    --centeringpercent: 96%;
+    --borderrad: 2vw;
   }
   div.bordered {
     display: block;
     padding: 2vw;
-    border-radius: 2vw;
   }
   div.bordered:not(:nth-of-type(1)) {
     margin-top: 20px;
-  }
-  div.menustyle {
-    border-radius: 2vw;
   }
   div.inline {
     width: 98%;
     margin: 0vw;
   }
-  button.menu {
+  button.menu, button.menuselected {
     width: 100%;
-    border-radius: 2vw;
-  }
-  button.menuselected {
-    width: 100%;
-    border-radius: 2vw;
   }
   div.menustyle {
-    width: 80%;
+    width: 60%;
     margin: auto;
   }
   img.styled {
@@ -203,5 +193,18 @@ td:first-child {
   th {
     padding-right: 0px;
     display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --centeringpercent: 900px;
+    --borderrad: 10px;
+  }
+  div.bordered:not(:nth-of-type(1)) {
+    margin-top: 20px;
+  }
+  div.menustyle {
+    margin: auto;
   }
 }
