@@ -79,6 +79,10 @@ div.bordered:not(:nth-of-type(1)) {
   margin-top: 2vw;
 }
 
+div.bordered:hover::first-line {
+  color: #188FA7;
+}
+
 @keyframes colorfadein {
   from {background-color: var(--unselected);}
   to {background-color: var(--selected);}
@@ -137,6 +141,7 @@ button.menu:hover {
   animation-name: colorfadein;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
+  cursor: grab;
 }
 
 table {
