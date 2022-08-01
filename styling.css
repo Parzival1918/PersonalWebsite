@@ -232,3 +232,38 @@ td:first-child {
     margin: auto;
   }
 }
+
+@media (pointer: none), (pointer: coarse), (hover: none) {
+  :root {
+    --centeringpercent: 96%;
+    --borderrad: 2vw;
+  }
+  div.bordered,div.project {
+    display: block;
+    padding: 2vw;
+  }
+  div.bordered:not(:nth-of-type(1)), div.project:not(:nth-of-type(1)) {
+    margin-top: 20px;
+  }
+  div.inline {
+    width: 98%;
+    margin: 0vw;
+  }
+  button.menu, button.menuselected {
+    width: 100%;
+  }
+  div.menustyle {
+    width: 60%;
+    margin: auto;
+  }
+  img.styled {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1vw;
+    vertical-align: inherit;
+  }
+  th {
+    padding-right: 0px;
+    display: block;
+  }
+}
