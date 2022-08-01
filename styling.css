@@ -47,6 +47,11 @@ h2 {
   margin-bottom: 10px;
 }
 
+p.date,h2.date {
+  display: inline;
+  margin-right: 20px;
+}
+
 div.center {
   margin: auto;
   width: var(--centeringpercent);
