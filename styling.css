@@ -69,18 +69,31 @@ div.bordered {
   animation-fill-mode: forwards;
 }
 
-div.bordered:hover {
+div.bordered:hover,div.project:hover {
   animation-name: colorfadein;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
-div.bordered:not(:nth-of-type(1)) {
+div.bordered:not(:nth-of-type(1)),div.project:not(:nth-of-type(1)) {
   margin-top: 2vw;
 }
 
-div.bordered:hover::first-line {
+div.bordered:hover::first-line,div.project:hover::first-line {
   color: #188FA7;
+}
+
+div.project {
+  margin: auto;
+  width: 95%;
+  padding: 0.5vw;
+  border-style: solid;
+  border-radius: var(--borderrad);
+  box-shadow: 0 4px 8px 0 var(--shadowboxes), 0 6px 20px 0 var(--shadowboxes);
+
+  animation-name: colorfadeout;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes colorfadein {
@@ -172,11 +185,11 @@ td:first-child {
     --centeringpercent: 96%;
     --borderrad: 2vw;
   }
-  div.bordered {
+  div.bordered,div.project {
     display: block;
     padding: 2vw;
   }
-  div.bordered:not(:nth-of-type(1)) {
+  div.bordered:not(:nth-of-type(1)), div.project:not(:nth-of-type(1)) {
     margin-top: 20px;
   }
   div.inline {
@@ -207,7 +220,7 @@ td:first-child {
     --centeringpercent: 900px;
     --borderrad: 10px;
   }
-  div.bordered:not(:nth-of-type(1)) {
+  div.bordered:not(:nth-of-type(1)), div.project:not(:nth-of-type(1)) {
     margin-top: 20px;
   }
   div.menustyle {
