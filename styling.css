@@ -266,7 +266,7 @@ td:first-child {
     padding-right: 0px;
     display: block;
   }
-  p {
+  p, td {
     font-size: 3vw;
   }
   h1 {
@@ -275,7 +275,7 @@ td:first-child {
   h2 {
     font-size: 5vw;
   }
-  button {
+  button.menu,button.menuselected {
     font-size: 4vw;
   }
 }
