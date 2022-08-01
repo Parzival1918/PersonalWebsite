@@ -233,7 +233,7 @@ td:first-child {
   }
 }
 
-@media (pointer: none), (pointer: coarse), (hover: none) {
+@media only screen (max-device-width: 480px){
   :root {
     --centeringpercent: 96%;
     --borderrad: 2vw;
