@@ -139,6 +139,7 @@ button.menu {
   padding: 0.8vw;
   font-size: 20px;
   font-weight: bolder;
+  color: var(--textcolor);
 
   animation-name: colorfadeout;
   animation-duration: 0.2s;
@@ -153,6 +154,7 @@ button.menuselected {
   padding: 0.8vw;
   font-size: 20px;
   font-weight: bolder;
+  color: var(--textcolor);
 }
 
 button.menu:hover {
@@ -227,6 +229,18 @@ iframe.ifstyle {
   th {
     padding-right: 0px;
     display: block;
+  }
+  p, td {
+    font-size: 3vw;
+  }
+  h1 {
+    font-size: 7vw;
+  }
+  h2 {
+    font-size: 5vw;
+  }
+  button.menu,button.menuselected {
+    font-size: 4vw;
   }
   iframe.ifstyle {
     width: 100%;
