@@ -27,6 +27,16 @@
 </header>
 
 <body class="bodystyling">
+  <script type="text/javascript">
+  window.onload = choosePic;
+
+  var myPix = new Array("Images/MyPic.jpg","Images/MyPicAlt1.jpeg","Images/MyPicAlt2.jpeg");
+
+  function choosePic() {
+       var randomNum = Math.floor(Math.random() * myPix.length);
+       document.getElementById("picImg").src = myPix[randomNum]
+  };
+  </script>
 
 <div class="center">
 
@@ -41,7 +51,7 @@
   <p>If you want to contact me for any reason please go to the <b>Profile</b> section
   to see my contact details or my social media.</p>
   <div class="inline">
-    <img src="Images/MyPic.jpg" alt="Front picture" width="40%" class="styled"/>
+    <img id="picImg" alt="Front picture" width="40%" class="styled"/>
     <p>This is the best picture I have of myself.</p>
   </div>
 
