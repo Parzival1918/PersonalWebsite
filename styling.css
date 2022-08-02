@@ -185,6 +185,17 @@ td:first-child {
   width: 30%;
 }
 
+iframe.ifstyle {
+  height: 40vh;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  align-items: center;
+  border-radius: var(--borderrad);
+  box-shadow: 0 4px 8px 0 var(--shadowboxes), 0 6px 20px 0 var(--shadowboxes);
+}
+
 @media screen and (max-width: 800px) {
   :root {
     --centeringpercent: 96%;
@@ -216,6 +227,9 @@ td:first-child {
   th {
     padding-right: 0px;
     display: block;
+  }
+  iframe.ifstyle {
+    width: 100%;
   }
 }
 
@@ -275,5 +289,8 @@ td:first-child {
   }
   button.menu,button.menuselected {
     font-size: 4vw;
+  }
+  iframe.ifstyle {
+    width: 100%;
   }
 }
