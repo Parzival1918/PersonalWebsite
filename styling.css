@@ -1,3 +1,9 @@
+:root {
+  --distmenu: 1em;
+  --backcolour: #a1edcc;
+  --accentcolour: #29a8ac;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -29,11 +35,11 @@ html, body {
 }
 */
 #column1 {
-  background-color: #a1edcc;
+  background-color: var(--backcolour);
   position: fixed;
   height: 100%;
   width: 25%;
-  padding: 0 0.6em;
+  padding: 1em 0.6em;
 }
 
 #column2 {
@@ -41,4 +47,37 @@ html, body {
   position: absolute;
   right: 0;
   padding: 0 1em;
+}
+
+button.menu {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  display: block;
+  margin-bottom: var(--distmenu);
+  background-color: transparent;
+  border: none;
+  transition: all 0.5s;
+}
+
+button.menu:hover, button.menuselected:hover {
+  cursor: pointer;
+  padding-left: 0.5em;
+}
+
+button.menuselected {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  display: block;
+  margin-bottom: var(--distmenu);
+  background-color: transparent;
+  border: none;
+  transition: all 0.5s;
+}
+
+h1 {
+  color: var(--accentcolour);
 }
