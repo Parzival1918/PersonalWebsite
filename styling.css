@@ -1,310 +1,44 @@
-:root {
-  --selected: rgba(0, 0, 0, 0.05);
-  --unselected: rgba(0, 0, 0, 0);
-  --textcolor: rgba(0, 0, 0, 1);
-  --backgroundcolor: rgba(0, 0, 0, 0);
-  --shadowboxes: rgba(0, 0, 0, 0.2);
-  --centeringpercent: 60%;
-  --borderrad: 1vw;
-}
-
-body.bodystyling {
-  color: var(--textcolor);
-  background-color: var(--backgroundcolor);
-  font-family: Arial;
-  margin: auto;
-
-  animation-name: fadein;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-header {
-  width: var(--centeringpercent);
-  margin: auto;
-  margin-top: 20px;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-h1 {
-  font-size: 35px;
-  font-weight: bolder;
-  border-bottom-style: solid;
-  border-bottom-color: var(--textcolor);
-  padding: 5px;
-}
-
-h2 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-p.date,h2.date {
-  display: inline;
-  margin-right: 20px;
-}
-
-div.center {
-  margin: auto;
-  width: var(--centeringpercent);
-  padding: 1vw;
-}
-
-div.bordered {
-  margin: auto;
-  width: 95%;
-  padding: 0.5vw;
-  border-style: solid;
-  border-radius: var(--borderrad);
-  box-shadow: 0 4px 8px 0 var(--shadowboxes), 0 6px 20px 0 var(--shadowboxes);
-  /*
-  display: grid;
-  grid-template-columns: 20% 80%;
-  */
-  animation-name: colorfadeout;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
-}
-
-div.bordered:hover,div.project:hover {
-  animation-name: colorfadein;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
-}
-
-div.bordered:not(:nth-of-type(1)),div.project:not(:nth-of-type(1)) {
-  margin-top: 2vw;
-}
-
-div.bordered:hover::first-line,div.project:hover::first-line {
-  color: #188FA7;
-}
-
-div.project {
-  margin: auto;
-  width: 95%;
-  padding: 0.5vw;
-  border-style: solid;
-  border-radius: var(--borderrad);
-  box-shadow: 0 4px 8px 0 var(--shadowboxes), 0 6px 20px 0 var(--shadowboxes);
-
-  animation-name: colorfadeout;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes colorfadein {
-  from {background-color: var(--unselected);}
-  to {background-color: var(--selected);}
-}
-
-@keyframes colorfadeout {
-  from {background-color:  var(--selected);}
-  to {background-color:  var(--unselected);}
-}
-
-div.inline {
-  padding: 1vw;
-  margin: auto;
-  border-bottom-style: solid;
-  text-align: center;
-}
-
-div.menustyle {
-  margin: auto;
-  padding: 0.5vw;
-  border-style: solid;
-  border-radius: var(--borderrad);
-}
-
-img.styled {
-  box-shadow: 0 4px 8px 0 var(--shadowboxes), 0 6px 20px 0 var(--shadowboxes);
-  margin: 1vw;
-  vertical-align: top;
-}
-
-button.menu {
-  text-align: center;
-  background-color: var(--backgroundcolor);
-  border-width: 0px;
-  border-radius: var(--borderrad);
-  padding: 0.8vw;
+html, body {
+  height: 100%;
+  margin: 0;
   font-size: 20px;
-  font-weight: bolder;
-  color: var(--textcolor);
-
-  animation-name: colorfadeout;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
+}
+/*
+#left {
+  padding: 2em;
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  background: cornflowerblue;
 }
 
-button.menuselected {
-  text-align: center;
-  background-color: var(--selected);
-  border-width: 0px;
-  border-radius: var(--borderrad);
-  padding: 0.8vw;
-  font-size: 20px;
-  font-weight: bolder;
-  color: var(--textcolor);
+#right {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  right: 0;
+  background: blue;
 }
 
-button.menu:hover {
-  animation-name: colorfadein;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
-  cursor: grab;
+#boxes {
+  content: "";
+  display: table;
+  clear: both;
+  margin: 0%;
+  padding: 0%;
+}
+*/
+#column1 {
+  background-color: #a1edcc;
+  position: fixed;
+  height: 100%;
+  width: 25%;
+  padding: 0 0.6em;
 }
 
-table {
-    width: 100%;
-}
-
-td {
-  padding-bottom: 5px;
-  padding-top: 5px;
-  vertical-align: top;
-  text-align: left;
-}
-
-th {
-  text-align: left;
-  vertical-align: top;
-  font-weight: normal;
-  padding-right: 4vw;
-}
-
-td:first-child {
-  font-weight: bold;
-  width: 30%;
-}
-
-iframe.ifstyle {
-  height: 40vh;
-  display: block;
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  align-items: center;
-  border-radius: var(--borderrad);
-  box-shadow: 0 4px 8px 0 var(--shadowboxes), 0 6px 20px 0 var(--shadowboxes);
-}
-
-@media screen and (max-width: 800px) {
-  :root {
-    --centeringpercent: 96%;
-    --borderrad: 2vw;
-  }
-  div.bordered,div.project {
-    display: block;
-    padding: 2vw;
-  }
-  div.bordered:not(:nth-of-type(1)), div.project:not(:nth-of-type(1)) {
-    margin-top: 20px;
-  }
-  div.inline {
-    width: 98%;
-    margin: 0vw;
-  }
-  button.menu, button.menuselected {
-    width: 100%;
-  }
-  div.menustyle {
-    margin: auto;
-  }
-  img.styled {
-    width: 100%;
-    margin: auto;
-    margin-bottom: 1vw;
-    vertical-align: inherit;
-  }
-  th {
-    padding-right: 0px;
-    display: block;
-  }
-  p, td {
-    font-size: 3vw;
-  }
-  h1 {
-    font-size: 7vw;
-  }
-  h2 {
-    font-size: 5vw;
-  }
-  button.menu,button.menuselected {
-    font-size: 4vw;
-  }
-  iframe.ifstyle {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  :root {
-    --centeringpercent: 900px;
-    --borderrad: 10px;
-  }
-  div.bordered:not(:nth-of-type(1)), div.project:not(:nth-of-type(1)) {
-    margin-top: 20px;
-  }
-  div.menustyle {
-    margin: auto;
-  }
-}
-
-@media (pointer: none), (pointer: coarse), (hover: none) {
-  :root {
-    --centeringpercent: 96%;
-    --borderrad: 2vw;
-  }
-  div.bordered,div.project {
-    display: block;
-    padding: 2vw;
-  }
-  div.bordered:not(:nth-of-type(1)), div.project:not(:nth-of-type(1)) {
-    margin-top: 20px;
-  }
-  div.inline {
-    width: 98%;
-    margin: 0vw;
-  }
-  button.menu, button.menuselected {
-    width: 100%;
-  }
-  div.menustyle {
-    margin: auto;
-  }
-  img.styled {
-    width: 100%;
-    margin: auto;
-    margin-bottom: 1vw;
-    vertical-align: inherit;
-  }
-  th {
-    padding-right: 0px;
-    display: block;
-  }
-  p, td {
-    font-size: 3vw;
-  }
-  h1 {
-    font-size: 7vw;
-  }
-  h2 {
-    font-size: 5vw;
-  }
-  button.menu,button.menuselected {
-    font-size: 4vw;
-  }
-  iframe.ifstyle {
-    width: 100%;
-  }
+#column2 {
+  width: 70%;
+  position: absolute;
+  right: 0;
+  padding: 0 1em;
 }
